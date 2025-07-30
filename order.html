@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Place Order</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+      padding: 50px;
+      text-align: center;
+    }
+    .order-box {
+      background: white;
+      padding: 30px;
+      margin: auto;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #00b4db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0083b0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="order-box">
+    <h2>Confirm Your Order</h2>
+    <p><strong>Product:</strong> Smart Watch</p>
+    <p><strong>Size:</strong> M</p>
+    <p><strong>Price:</strong> ₹1999</p>
+
+    <button onclick="placeOrder()">Place Order</button>
+  </div>
+
+  <script>
+    function placeOrder() {
+      const userId = localStorage.getItem("user_id"); // login ke time store hua
+      if (!userId) {
+        alert("Please login first!");
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("user_id", userId);
+      formData.append("product_name", "Smart Watch");
+      formData.append("size", "M");
+      formData.append("price", 1999);
+
+      fetch("place_order.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(res => res.text())
+      .then(alert)
+      .catch(err => alert("Error placing order"));
+    }
+  </script>
+
+</body>
+</html>

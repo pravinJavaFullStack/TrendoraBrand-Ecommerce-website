@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+.detail-card {
+  display: flex;
+  gap: 30px;
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+}
+
+.detail-card img {
+  width: 280px;
+  border-radius: 10px;
+}
+
+.detail-info {
+  max-width: 600px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.detail-info h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.detail-info p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.label-text {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.size-dropdown {
+  padding: 10px;
+  font-size: 16px;
+  width: 180px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #0b8f0b;
+}
+
+.add-cart {
+  background: #007bff;
+}
+
+.add-cart:hover {
+  background: #0056b3;
+}
+
+    .related-products {
+      margin-top: 40px;
+      background-color: #706b6b;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .related-products h3 {
+      color: #fff;
+      margin-left: 10px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    .related-list {
+      display: flex;
+      gap: 250px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+    .related-list .product {
+      width: 180px;
+      flex: 0 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      cursor: pointer;
+      height: 250px;
+    }
+    .related-list .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+    .related-list .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="detail-card">
+  <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/u/a/4/-original-imahd2zaqdcycwms.jpeg?q=70" alt="T-Shirt" />
+  <div class="detail-info">
+        <h2 >Asian</h2>
+    <p id="product-desc">
+      Campus shoes offer the perfect mix of comfort, style, and performance for everyday wear. Designed with breathable material and cushioned soles, they ensure all-day comfort. Whether for walking, running, or casual outings, these shoes provide a sporty and trendy look.
+
+    </p>
+
+   <label for="size" class="label-text">Shoe Size:</label>
+<select id="size" name="size" class="size-dropdown">
+  <option value="">Select Shoe Size</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>
+
+
+    <div class="button-group">
+      <button class="buy-button">Buy Now</button>
+      <button class="buy-button add-cart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+  <div class="related-products">
+    <h3>Related Products</h3>
+    <div class="related-list">
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/w/f/7/-original-imahd2pfvmdgy23m.jpeg?q=70">
+        <p>UrbanBox</p>
+      </div>
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/s/l/u/6-rso436-6-red-tape-white-original-imahdr57w9ydzvzc.jpeg?q=70">
+        <p>Red Tap</p>
+      </div>
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/2/j/n/-original-imahd2zcf8w6mw7f.jpeg?q=70">
+        <p>Sparx</p>
+      </div>
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/m/9/c/-original-imagq9jysggzcgsa.jpeg?q=70">
+        <p>Mikaasa</p>
+      </div>
+    </div>
+
+<script>
+  // Read URL parameters
+  const params = new URLSearchParams(window.location.search);
+  const title = params.get("title");
+  const desc = params.get("desc");
+  const img = params.get("img");
+
+  // Set default if not present
+  document.getElementById("product-title").textContent = title || "N AND J Men Solid Polo Neck Polyester Purple T-Shirt";
+  document.getElementById("product-desc").textContent = desc || "Upgrade your wardrobe with this stylish purple polo neck T-shirt from N AND J. Made with premium polyester, it's breathable, durable, and perfect for daily use.";
+  document.getElementById("product-img").src = img || "https://via.placeholder.com/250x250?text=No+Image";
+</script>
+
+</body>
+</html>

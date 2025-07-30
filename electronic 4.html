@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+.detail-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  background: #f7f7f7;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+}
+
+.detail-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.detail-info {
+  max-width: 700px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.detail-info h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.detail-info p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.label-text {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin: 15px 0 5px;
+}
+
+.size-dropdown,
+#quantity {
+  padding: 10px;
+  font-size: 16px;
+  width: 180px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #0b8f0b;
+}
+
+.add-cart {
+  background: #007bff;
+}
+
+.add-cart:hover {
+  background: #0056b3;
+}
+
+.related-products {
+  margin-top: 40px;
+  background-color: #706b6b;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.related-products h3 {
+  color: #fff;
+  margin-left: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.related-list {
+  display: flex;
+  gap: 250px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+.related-list .product {
+  width: 180px;
+  flex: 0 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  cursor: pointer;
+  height: 250px;
+}
+.related-list .product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+.related-list .product img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain; /* Show full image without cropping */
+  background-color: #f9f9f9; /* Optional: adds clean background */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .detail-card img {
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .detail-info {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .related-list {
+    gap: 20px;
+  }
+
+  .related-products h3 {
+    font-size: 1.4rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="detail-card">
+  <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/t/0/n/-original-imah4bzezrvt7bzp.jpeg?q=70" alt="T-Shirt" />
+  <div class="detail-info">
+    <h2 id="product-title">boAt Soundbar</h2>
+    <p id="product-desc">
+      The boAt Aavante Bar 1150D, an entry‑level 2.0‑channel soundbar, delivers around 80 W output with Dolby Audio support and multiple connectivity options—Bluetooth 5.0, HDMI ARC, USB, AUX, and optical input—making it one of the most fully featured budget options available around ₹5–6 K
+    </p>
+
+    <p style="font-size: 20px; color: #000; margin-bottom: 10px;">
+      <b>Price: ₹5599</b> <span style="color: green;">(20% OFF)</span>
+    </p>
+
+    <p style="color: green; font-weight: bold;">In Stock</p>
+    <p>⭐⭐⭐⭐☆ (4.2/5 based on 275 reviews)</p>
+    <p>🚚 Free Delivery by <b>Monday, July 29</b></p>
+    <p>💳 Cash on Delivery available</p>
+
+   <ul>
+  <li>Sound: Powerful HD Sound with Deep Bass</li>
+  <li>Connectivity: Bluetooth v5.0 with 10m range</li>
+  <li>Battery: Up to 8 hours of playback</li>
+  <li>Color: Black</li>
+</ul>
+
+
+    <label for="power" class="label-text">Speaker Wattage:</label>
+<select id="power" name="power" class="size-dropdown">
+  <option value="">Select Wattage</option>
+  <option value="5W">5W</option>
+  <option value="10W">10W</option>
+  <option value="14W">14W</option>
+  <option value="20W">20W</option>
+</select>
+
+
+    <label for="quantity" class="label-text">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" value="1" min="1">
+
+    <div class="button-group">
+      <button class="buy-button">Buy Now</button>
+      <button class="buy-button add-cart">Add to Cart</button>
+      <button style="background: #ff4081; color: white; padding: 10px 15px; border: none; border-radius: 5px;">❤️ Add to Wishlist</button>
+    </div>
+    <br><br>
+    <p>✅ 100% Original Products</p>
+    <p>✅ 7-Day Easy Return</p>
+    <p>✅ Secure Payments via Razorpay / UPI / Card</p>
+
+    <p><b>Brand:</b> Boat</p>
+    <p><b>Sold by:</b> Trendora Retail Pvt Ltd</p>
+    <p><b>EMI:</b> Available on orders above ₹5000</p>
+
+  </div>
+</div>
+
+  <div class="related-products">
+  <h3>Related Products - boAt Speakers</h3>
+  <div class="related-list">
+    
+    <div class="product">
+      <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/mobile-tablet-speaker/h/n/e/bx-stone-350-dynamic-bass-portable-powered-with-2200mah-battery-original-imah2xytvyqb8avk.jpeg?q=70" alt="boAt Stone 350">
+      <p>boAt Stone 350</p>
+    </div>
+
+    <div class="product">
+      <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/v/t/d/-original-imah8zfeevzzumud.jpeg?q=70" alt="boAt Stone 180">
+      <p>boAt Stone 180</p>
+    </div>
+
+    <div class="product">
+      <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/x/q/b/-original-imah2d55jusy9p9t.jpeg?q=70" alt="boAt Stone 1200F">
+      <p>boAt Stone 1200F</p>
+    </div>
+
+    <div class="product">
+      <img src="https://rukminim2.flixcart.com/image/612/612/l31x2fk0/speaker/s/6/j/-original-image9ezeb6yzyya.jpeg?q=70" alt="boAt Stone 620">
+      <p>boAt Stone 620</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const title = params.get("title");
+  const desc = params.get("desc");
+  const img = params.get("img");
+
+  document.getElementById("product-title").textContent = title || "N AND J Men Solid Polo Neck Polyester Purple T-Shirt";
+  document.getElementById("product-desc").textContent = desc || "Upgrade your wardrobe with this stylish purple polo neck T-shirt from N AND J. Made with premium polyester, it's breathable, durable, and perfect for daily use.";
+  document.getElementById("product-img").src = img || "https://via.placeholder.com/250x250?text=No+Image";
+</script>
+
+</body>
+</html>

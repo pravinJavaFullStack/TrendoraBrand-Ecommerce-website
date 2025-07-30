@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+.detail-card {
+  display: flex;
+  gap: 30px;
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+}
+
+.detail-card img {
+  width: 280px;
+  border-radius: 10px;
+}
+
+.detail-info {
+  max-width: 600px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.detail-info h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.detail-info p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.label-text {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.size-dropdown {
+  padding: 10px;
+  font-size: 16px;
+  width: 180px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #0b8f0b;
+}
+
+.add-cart {
+  background: #007bff;
+}
+
+.add-cart:hover {
+  background: #0056b3;
+}
+
+    .related-products {
+      margin-top: 40px;
+      background-color: #706b6b;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .related-products h3 {
+      color: #fff;
+      margin-left: 10px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    .related-list {
+      display: flex;
+      gap: 250px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+    .related-list .product {
+      width: 180px;
+      flex: 0 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      cursor: pointer;
+      height: 250px;
+    }
+    .related-list .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+    .related-list .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-bottom: 5px;
+    }
+       @media (max-width: 768px) {
+  .detail-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .detail-card img {
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .detail-info {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .related-list {
+    gap: 20px; /* 👈 reduced gap from 250px to fit small screens */
+  }
+
+  .related-products h3 {
+    font-size: 1.4rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="detail-card">
+  <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/perfume/z/c/1/100-men-godfather-long-lasting-eau-de-parfum-100-ml-perfume-original-imahd2yzqqttuqwu.jpeg?q=70" alt="T-Shirt" />
+  <div class="detail-info">
+    <h2>God Father </h2>
+    <p>
+            Men’s perfume adds a touch of sophistication and confidence to a man’s personality.
+      With notes ranging from woody and spicy to fresh and citrusy, it suits every mood and occasion.
+      A good fragrance not only enhances presence but also leaves a lasting impression.
+    </p>
+
+    <label for="size" class="label-text">Quantity:</label>
+<select id="size" name="size" class="size-dropdown">
+  <option value="">Select Quantity</option>
+  <option value="30ml">30ml</option>
+  <option value="50ml">50ml</option>
+  <option value="75ml">75ml</option>
+  <option value="100ml">100ml</option>
+</select>
+
+    <div class="button-group">
+      <button class="buy-button">Buy Now</button>
+      <button class="buy-button add-cart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+  <div class="related-products">
+    <h3>Related Products</h3>
+    <div class="related-list">
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/perfume/l/e/h/-original-imah3g7wehtvwuqy.jpeg?q=70">
+        <p>Wild Stones</p>
+      </div>
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/perfume/o/y/l/60-original-long-lasting-fresh-soothing-fragrance-perfume-aqua-original-imah5p7ex45xnqnv.jpeg?q=70">
+        <p>Aqua Red</p>
+      </div>
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/perfume/x/q/i/50-legend-perfume-eau-de-parfum-killer-men-original-imaheaxq5tghsgbk.jpeg?q=70">
+        <p>Killers</p>
+      </div>
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/perfume/g/b/g/100-ceo-man-eau-de-parfum-long-lasting-notes-of-tonka-agarwood-original-imah8ajthn5ynpfk.jpeg?q=70">
+        <p>Bellvita</p>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Read URL parameters
+  const params = new URLSearchParams(window.location.search);
+  const title = params.get("title");
+  const desc = params.get("desc");
+  const img = params.get("img");
+
+  // Set default if not present
+  document.getElementById("product-title").textContent = title || "N AND J Men Solid Polo Neck Polyester Purple T-Shirt";
+  document.getElementById("product-desc").textContent = desc || "Upgrade your wardrobe with this stylish purple polo neck T-shirt from N AND J. Made with premium polyester, it's breathable, durable, and perfect for daily use.";
+  document.getElementById("product-img").src = img || "https://via.placeholder.com/250x250?text=No+Image";
+</script>
+
+</body>
+</html>

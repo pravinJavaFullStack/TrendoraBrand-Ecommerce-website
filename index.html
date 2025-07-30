@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Website</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<section id="home">
+<header>
+  <nav class="navbar">
+    <h1 class="logo">Trendora</h1>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navMenu">
+      <li><a href="#home">Home</a></li>
+      <!-- 🔻 Products with Dropdown -->
+      <li class="has-submenu">
+        <a href="#products">Products ▾</a>
+        <ul class="submenu">
+           <li><a href="#product">Our Product</a></li>
+          <li><a href="#men">Men</a></li>
+          <li><a href="#women">Women</a></li>
+          <li><a href="#electronics">Electronics & Appliances</a></li>
+        </ul>
+      </li>
+
+      <li><a href="service.html">Services</a></li>
+     <!-- ✅ Navbar dropdown for User -->
+      <li class="has-submenu">
+        <a href="#user">User ▾</a>
+        <ul class="submenu">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </li>
+
+
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+</section>
+
+<section id="home">
+<section class="slider">
+  <div class="slides">
+
+    <!-- ❌ Slide with empty text -->
+    <div class="slide-container">
+      <img src="https://img.freepik.com/free-psd/gradient-fashion-youtube-cover-template_23-2150014572.jpg?semt=ais_hybrid&w=740" class="slide" />
+      <div class="slide-text">
+        <div class="slide-text-left">
+        </div>
+        <div class="slide-text-right">
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 1 -->
+    <div class="slide-container">
+      <img src="slider/Slider 1.jpg" class="slide" />
+      <div class="slide-text">
+        <div class="slide-text-left">
+          <h2>Trendora</h2>
+        </div>
+        <div class="slide-text-right">
+          <p>Stylish T-Shirts made with breathable<br> cotton. Comfort that lasts all day.</p>
+          <a href="#product"><button class="slide-button" onclick="handleClick()">Shop Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide-container">
+      <img src="slider/slider 2.jpg" class="slide" />
+      <div class="slide-text">
+        <div class="slide-text-left">
+          <h2>Trendora</h2>
+        </div>
+        <div class="slide-text-right">
+          <p>From meetings to moments, dress right.<br>Shirts crafted with precision.</p>
+          <a href="#product"><button class="slide-button" onclick="handleClick()">Shop Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide-container">
+      <img src="slider/slider 3.jpg" class="slide" />
+      <div class="slide-text">
+        <div class="slide-text-left">
+          <h2>Trendora</h2>
+        </div>
+        <div class="slide-text-right">
+          <p>Walk with confidence in every step.<br>Shoes that blend comfort and class.</p>
+          <a href="#product"><button class="slide-button" onclick="handleClick()">Shop Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide-container">
+      <img src="slider/slider 4.jpg" class="slide" />
+      <div class="slide-text">
+        <div class="slide-text-left">
+          <h2>Trendora</h2>
+        </div>
+        <div class="slide-text-right">
+          <p>Tailored coats for timeless style.<br>Stay warm, stay premium.</p>
+          <a href="#product"><button class="slide-button" onclick="handleClick()">Shop Now</button></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ✅ Arrow buttons correctly placed -->
+  <button class="prev" onclick="prevSlide()">❮</button>
+  <button class="next" onclick="nextSlide()">❯</button>
+</section>
+</section>
+
+<section id="product">
+  <section class="product-section">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+
+      <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/f/l/q/m-z1-sr56-metronaut-original-imah47zpysusgdcn.jpeg?q=70" alt="T-Shirt" />
+          <h3>P and S</h3>
+        </div>
+      </a>
+
+      <a href="product-detail1.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/3/j/x/xl-fs01002-blue-dove-original-imah3yhy7mxmjydh.jpeg?q=70" alt="Shirt" />
+          <h3>Loneix</h3>
+        </div>
+      </a>
+
+      <a href="product-detail2.html" style="text-decoration: none; color: inherit;">
+       <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/top/q/e/4/l-1-crop-top-rahi-trendz-original-imahcqfmgafzvgue.jpeg?q=70" alt="Rahining" />
+         <h3>Rahining</h3>
+       </div>
+      </a>
+
+
+      <a href="product-detail3.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sandal/1/6/2/7-203-bellies-7-havinosh-beige-original-imahdg5prynv9r8t.jpeg?q=70" alt="Coat" />
+          <h3>Havinash</h3>
+        </div>
+      </a>
+
+      <a href="product-detail4.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/perfume/z/c/1/100-men-godfather-long-lasting-eau-de-parfum-100-ml-perfume-original-imahd2yzqqttuqwu.jpeg?q=70" alt="Perfume" />
+          <h3>Mens Perfume</h3>
+        </div>
+      </a>
+
+      <a href="product-detail5.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/perfume/y/x/p/100-0-romance-eau-de-parfum-eau-de-parfum-secret-temptation-original-imahcjquyubpd9sr.jpeg?q=70" alt="Coat" />
+          <h3>Womens Perfume</h3>
+        </div>
+      </a>
+
+      <a href="product-detail6.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/w/w/a/7-8-years-205-chromafashion-original-imahbg3fcqtksg7w.jpeg?q=70" alt="Jeans" />
+          <h3>Chroma Fashion</h3>
+        </div>
+      </a>
+
+      <a href="product-detail7.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/h/9/r/l-hlsh022620-highlander-original-imahchfsvmhcec4h.jpeg?q=70" alt="Coat" />
+          <h3>Pandass</h3>
+        </div>
+      </a>
+
+      <a href="product-detail8.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/f/g/x/l-collar-tshirt-for-men-n-and-j-original-imah9n9u4hawk9uq.jpeg?q=70" alt="Jeans" />
+          <h3>EyeBogler</h3>
+        </div>
+      </a>
+
+      <a href="product-detail9.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/120/120/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=80" alt="Smartwatch" />
+          <h3>Smart Watch</h3>
+        </div>
+      </a>
+
+      <a href="product-detail10.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/120/120/l58iaa80/headphone/k/z/m/nord-buds-ce-oneplus-original-imagfyk4hyvgg6ze.jpeg?q=80" alt="One Plus" />
+          <h3>One Plus</h3>
+        </div>
+      </a>
+
+      <a href="product-detail11.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sunglass/6/e/4/black-thomas-silver-black2-resist-eyewear-original-imahdj8sz3g2s9xq.jpeg?q=70" alt="Mens Glass" />
+          <h3>Men's Glass</h3>
+        </div>
+      </a>
+
+      <a href="product-detail12.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/frame/j/o/5/40-na-club-black-clear-mkzone-original-imahdz6waektfghm.jpeg?q=70" alt="Women Glass" />
+          <h3>Women Glass </h3>
+        </div>
+      </a>
+
+      <a href="product-detail13.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/instant-camera/v/c/4/mini-12-instax-16791364-fujifilm-original-imagzkbnuhxrakn6.jpeg?q=70" alt="Instex" />
+          <h3>Instex</h3>
+        </div>
+      </a>
+
+      <a href="product-detail14.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/trouser/m/b/u/s-plzo-cmb2-fuback-original-imah7fwdtzf6wmzc.jpeg?q=70" alt="One Plus" />
+          <h3>Fukbek</h3>
+        </div>
+      </a>
+
+      <a href="product-detail15.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/l/d/z/xxl-frml-st2-vebnor-original-imahdt2bhmhkhkf4.jpeg?q=70" alt="One Plus" />
+          <h3>Men Formal</h3>
+        </div>
+      </a>
+
+      <a href="product-detail16.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/y/y/-original-imahcfwmhfccryad.jpeg?q=70" alt="One Plus" />
+          <h3>One Plus</h3>
+        </div>
+      </a>
+
+      <a href="product-detail17.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/k/w/c/-original-imahdzg7rrpztry8.jpeg?q=70" alt="One Plus" />
+          <h3>Oppo Reno14</h3>
+        </div>
+      </a>
+    </div>
+  </section>
+</section>
+
+
+<section id="men">
+  <section class="product-section">
+    <h2>Men's Collection</h2>
+    <div class="product-grid men-product-grid">
+     <a href="product men 1.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jean/a/j/s/28-fd-dark-grey-115-05-fude-pride-original-imahdfesmfzphprz.jpeg?q=70" alt="Fude Pride" />
+          <h3>Fude Pride</h3>
+        </div>
+      </a>
+
+      <a href="product men 2.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+       <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jean/2/9/y/30-bluejeans-29-brexx-original-imahcpr3dwsytbmh.jpeg?q=70" alt="Brexx Blue Jeans" />
+        <h3>Brexx</h3>
+      </div>
+      </a>
+
+      <a href="product men 3.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jean/s/r/l/28-jean-slim-003-noah-original-imah52sybrszhgyu.jpeg?q=70" alt="Jeans" />
+        <h3>Jaar Fashion</h3>
+        </div>
+      </a>
+
+       <a href="product men 4.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/a/0/q/-original-imahd2zzgreg7fzz.jpeg?q=70" alt="Jeans" />
+        <h3>Provogues</h3>
+        </div>
+      </a>
+
+      <a href="product men 5.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/g/n/7/10-5g-845-10-campus-mod-blu-wht-original-imah9bgw6y4v9hva.jpeg?q=70" alt="Coat" />
+          <h3>Campus</h3>
+        </div>
+      </a>
+
+      <a href="product men 6.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/u/a/4/-original-imahd2zaqdcycwms.jpeg?q=70" alt="Jeans" />
+          <h3>Asian </h3>
+        </div>
+      </a>
+
+      <a href="product men 7.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/d/a/u/xxl-aut-formal-metronaut-original-imagwmj5gupusyza.jpeg?q=70" alt="T-Shirt" />
+          <h3>VebNor</h3>
+        </div>
+      </a>
+
+      <a href="product men 8.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/c/w/a/s-mt-formal-shirt-metronaut-original-imagwj64pqq5gf2g.jpeg?q=70" alt="Shirt" />
+          <h3>Metronaut</h3>
+        </div>
+      </a>
+
+      <a href="product men 9.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/slipper-flip-flop/j/3/o/8-group-313-aadi-black-original-imah2ksgggbnqnxg.jpeg?q=70" alt="Coat" />
+          <h3>Aadi</h3>
+        </div>
+      </a>
+
+      <a href="product men 10.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/g/u/r/xl-nt-121-ziczac-urban-buccachi-original-imahdu9wrzdhn6rh.jpeg?q=70" alt="Jeans" />
+          <h3>Try</h3>
+        </div>
+      </a>
+
+      <a href="product men 11.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/wallet-card-wallet/n/i/8/top-quality-genuine-leather-wallet-for-men-wh2052nrl-wallet-original-imahfa9tdcv6aegz.jpeg?q=70" alt="Coat" />
+          <h3>WildHorn</h3>
+        </div>
+      </a>
+
+      <a href="product men 12.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/brief/j/m/m/l-xybrf216-xyxx-original-imahyahsqzuu5fga.jpeg?q=70" alt="Jeans" />
+          <h3>XYXX </h3>
+        </div>
+      </a>
+      <!-- Add more products here the same way... -->
+    </div>
+  </section>
+</section>
+
+
+<section id="women">
+<section class="product-section">
+  <h2>Women's Collection</h2>
+  <div class="product-grid">
+      <a href="product-women-1.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/apparel-set/q/p/z/s-mustang-blue-co-ords-tinkudi-original-imahaqd4tkmqxuqw.jpeg?q=90" alt="T-Shirt" />
+          <h3>TinKhudi</h3>
+        </div>
+      </a>
+
+      <a href="product-women-2.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/8/z/y/l-ygwset00024-org-fashion-dream-original-imahdmnhf54ntfgz.jpeg?q=70" alt="Shirt" />
+          <h3>Fashion Dream</h3>
+        </div>
+      </a>
+
+      <a href="product-women-3.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/r/a/w/1-ld-l144-blu-ch-rustet-women-original-imahd2qjg7zgbrby.jpeg?q=70" alt="Shoes" />
+          <h3>Rutetd</h3>
+        </div>
+      </a>
+
+      <a href="product-women-4.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/w/i/6/1-2278228-dressberry-women-original-imahay236hg7guen.jpeg?q=70" alt="Coat" />
+          <h3>DressBreey</h3>
+        </div>
+      </a>
+
+      <a href="product-women-5.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jean/7/u/b/30-jeans004-volviera-original-imahdvrsfn4as3u7.jpeg?q=70" alt="Jeans" />
+          <h3>VolViera</h3>
+        </div>
+      </a>
+
+      <a href="product-women-6.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jean/1/w/r/34-dl-women-baggy-12-denim-look-original-imah87hyyzxkveyv.jpeg?q=70" alt="Coat" />
+          <h3>Denim Look</h3>
+        </div>
+      </a>
+
+      <a href="product-women-7.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/w/d/4/s-line-shirt-1-swaggish-original-imahcy4chmvf6zbu.jpeg?q=70" alt="Jeans" />
+          <h3>BNS</h3>
+        </div>
+      </a>
+
+      <a href="product-women-8.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/i/g/5/l-0039-dl-fashion-original-imahcjxxd8g46yaj.jpeg?q=70" alt="Coat" />
+          <h3>DL Fashion</h3>
+        </div>
+      </a>
+
+      <a href="product-women-9.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/slipper-flip-flop/l/1/k/5-womens-comfort-trending-slippers-house-soft-flat-slippers-original-imahbyjjckeeh6c3.jpeg?q=70" alt="Jeans" />
+          <h3>Piaccso </h3>
+        </div>
+      </a>
+  </div>
+</section>
+</section>
+<section id="electronics">
+  <section class="product-section">
+    <h2>Electronics & Appliances</h2>
+    <div class="electronics-grid">
+
+      <a href="electronic 1.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/dslr-camera/g/5/p/eos-18-eos-3000d-canon-original-imahbfq7fjbpzgvm.jpeg?q=70" alt="Camera" />
+          <h3>Canon DSLR</h3>
+        </div>
+      </a>
+
+      <a href="electronic 2.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/refrigerator-new/h/y/t/-original-imagwnjnez3fhghk.jpeg?q=70" alt="Fridge" />
+          <h3>Samsung Fridge</h3>
+        </div>
+      </a>
+
+      <a href="electronic 3.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/air-conditioner-new/x/t/s/-original-imaha7kbepa5abbv.jpeg?q=70" alt="AC" />
+          <h3>Voltas AC</h3>
+        </div>
+      </a>
+
+      <a href="electronic 4.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/t/0/n/-original-imah4bzezrvt7bzp.jpeg?q=70" alt="Speaker" />
+          <h3>boAt Soundbar</h3>
+        </div>
+      </a>
+
+      <a href="electronic 5.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/television/d/n/c/-original-imahdzrcyffb5uzh.jpeg?q=70" alt="TV" />
+          <h3>LG Smart TV</h3>
+        </div>
+      </a>
+
+      <a href="electronic 6.html" style="text-decoration: none; color: inherit;">
+        <div class="product">
+          <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/washing-machine-new/z/b/x/-original-imahb3n8kzfcgeuv.jpeg?q=70" alt="Washing Machine" />
+          <h3>Whirlpool Washer</h3>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</section>
+
+
+<section id="contact">
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>We are dedicated to delivering premium clothing for modern. Quality, style, and comfort — all in one place.</p>
+    </div>
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Support -->
+    <div class="footer-section">
+      <h3>Customer Support</h3>
+      <ul>
+        <li><a href="help.html">Help Center</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="shipping info.html">Shipping Info</a></li>
+        <li><a href="privacy policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: pravinsharma5109@gmail.com</p>
+      <p>Phone: +91 9175733708</p>
+      <p>Address: Mumbai, India</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section social-media">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Praveen Sharma. All rights reserved.</p>
+  </div>
+</footer>
+</section>
+  <script src="index.js"></script>
+</body>
+</html>

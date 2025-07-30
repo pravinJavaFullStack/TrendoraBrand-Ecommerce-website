@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+.detail-card {
+  display: flex;
+  gap: 30px;
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+}
+
+.detail-card img {
+  width: 280px;
+  border-radius: 10px;
+}
+
+.detail-info {
+  max-width: 600px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.detail-info h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.detail-info p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.label-text {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.size-dropdown {
+  padding: 10px;
+  font-size: 16px;
+  width: 180px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #0b8f0b;
+}
+
+.add-cart {
+  background: #007bff;
+}
+
+.add-cart:hover {
+  background: #0056b3;
+}
+
+    .related-products {
+      margin-top: 40px;
+      background-color: #706b6b;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .related-products h3 {
+      color: #fff;
+      margin-left: 10px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    .related-list {
+      display: flex;
+      gap: 250px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+    .related-list .product {
+      width: 180px;
+      flex: 0 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      cursor: pointer;
+      height: 250px;
+    }
+    .related-list .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+    .related-list .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="detail-card">
+  <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/wallet-card-wallet/n/i/8/top-quality-genuine-leather-wallet-for-men-wh2052nrl-wallet-original-imahfa9tdcv6aegz.jpeg?q=70" alt="T-Shirt" />
+  <div class="detail-info">
+    <h2>WildHorn</h2>
+    <p id="product-desc">
+      This men’s wallet is crafted from premium leather, offering a sleek and durable design. It features multiple compartments for cards, cash, and coins, keeping your essentials organized. Compact yet spacious, it's perfect for daily use and fits easily in your pocket.
+    </p>
+
+    <label for="size" class="label-text">Wallet Type:</label>
+<select id="size" name="size" class="size-dropdown">
+  <option value="">Select Wallet Type</option>
+  <option value="slim">Slim Wallet</option>
+  <option value="bifold">Bifold Wallet</option>
+  <option value="trifold">Trifold Wallet</option>
+  <option value="zipper">Zipper Wallet</option>
+  <option value="money-clip">Money Clip Wallet</option>
+</select>
+
+    <div class="button-group">
+      <button class="buy-button">Buy Now</button>
+      <button class="buy-button add-cart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+  <div class="related-products">
+    <h3>Related Products</h3>
+    <div class="related-list">
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/wallet-card-wallet/y/p/a/men-casual-black-artificial-leather-wallet-regular-size-12-card-original-imah3hkezmw2ewp5.jpeg?q=70">
+        <p>TaQwa</p>
+      </div>
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/wallet-card-wallet/w/d/1/classy-vegan-leather-purse-with-zip-closure-1-12-1081-new-8-original-imah5zwazksmxep6.jpeg?q=70">
+        <p>BullFinch</p>
+      </div>
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/card-holder/f/d/r/men-women-card-holder-1-card-holder-banistrokes-1-original-imah2spvbnpjwcpa.jpeg?q=70">
+        <p>Urban Fashion</p>
+      </div>
+      <div class="product">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/wallet-card-wallet/u/q/j/georgia-115-101ubf1010-8-wallet-urban-forest-95-original-imaghr6hcwapb9fk.jpeg?q=70">
+        <p>Forest</p>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Read URL parameters
+  const params = new URLSearchParams(window.location.search);
+  const title = params.get("title");
+  const desc = params.get("desc");
+  const img = params.get("img");
+
+  // Set default if not present
+  document.getElementById("product-title").textContent = title || "N AND J Men Solid Polo Neck Polyester Purple T-Shirt";
+  document.getElementById("product-desc").textContent = desc || "Upgrade your wardrobe with this stylish purple polo neck T-shirt from N AND J. Made with premium polyester, it's breathable, durable, and perfect for daily use.";
+  document.getElementById("product-img").src = img || "https://via.placeholder.com/250x250?text=No+Image";
+</script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Services - MyEcommerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #706b6b;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: white;
+      font-size: 3.00rem;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+      height: 250px;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-box img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .service-box h3 {
+      font-size: 1.45rem;
+      margin-bottom: 30px;
+      margin-top: 15px;
+      color: #222;
+    }
+
+    .service-box p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    @media (max-width: 500px) {
+      .service-box {
+        padding: 15px;
+      }
+
+      .service-box img {
+        width: 50px;
+      }
+
+      .service-box h3 {
+        font-size: 1rem;
+      }
+
+      .service-box p {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Services</h1>
+
+  <div class="services-container">
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/50/000000/delivery.png" alt="Free Shipping">
+      <h3>Free Shipping</h3>
+      <p>On orders above ₹499 anywhere in India.</p>
+    </div>
+
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/50/000000/return-purchase.png" alt="Easy Returns">
+      <h3>Easy Returns</h3>
+      <p>7-day hassle-free return & exchange policy.</p>
+    </div>
+
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/50/000000/money.png" alt="Cash on Delivery">
+      <h3>Cash on Delivery</h3>
+      <p>Pay after delivery. No advance required!</p>
+    </div>
+
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/50/000000/lock-2.png" alt="Secure Payment">
+      <h3>Secure Payment</h3>
+      <p>100% secure transactions with SSL encryption.</p>
+    </div>
+
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/50/000000/truck.png" alt="Fast Delivery">
+      <h3>Fast Delivery</h3>
+      <p>1–3 days express delivery in major cities.</p>
+    </div>
+
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/50/000000/customer-support.png" alt="Support">
+      <h3>24/7 Support</h3>
+      <p>We’re always here for you via chat or call.</p>
+    </div>
+
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/50/000000/gift.png" alt="Gift Wrap">
+      <h3>Gift Wrapping</h3>
+      <p>Add custom gift wraps for special occasions.</p>
+    </div>
+
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/50/000000/loyalty-card.png" alt="Loyalty Program">
+      <h3>Reward Points</h3>
+      <p>Earn rewards every time you shop with us!</p>
+    </div>
+  </div>
+
+</body>
+</html>

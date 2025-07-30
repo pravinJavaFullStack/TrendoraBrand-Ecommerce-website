@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+.detail-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  background: #f7f7f7;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+}
+
+.detail-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.detail-info {
+  max-width: 700px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.detail-info h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.detail-info p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.label-text {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin: 15px 0 5px;
+}
+
+.size-dropdown,
+#quantity {
+  padding: 10px;
+  font-size: 16px;
+  width: 180px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #0b8f0b;
+}
+
+.add-cart {
+  background: #007bff;
+}
+
+.add-cart:hover {
+  background: #0056b3;
+}
+
+.related-products {
+  margin-top: 40px;
+  background-color: #706b6b;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.related-products h3 {
+  color: #fff;
+  margin-left: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.related-list {
+  display: flex;
+  gap: 250px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+.related-list .product {
+  width: 180px;
+  flex: 0 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  cursor: pointer;
+  height: 250px;
+}
+.related-list .product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+.related-list .product img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain; /* Show full image without cropping */
+  background-color: #f9f9f9; /* Optional: adds clean background */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .detail-card img {
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .detail-info {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .related-list {
+    gap: 20px;
+  }
+
+  .related-products h3 {
+    font-size: 1.4rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="detail-card">
+  <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/air-conditioner-new/x/t/s/-original-imaha7kbepa5abbv.jpeg?q=70" alt="T-Shirt" />
+  <div class="detail-info">
+    <h2 id="product-title">Voltas AC</h2>
+    <p id="product-desc">
+      Voltas AC offers powerful and efficient cooling, ideal for Indian summers. With features like turbo cooling, sleep mode, and energy-saving technology, it ensures comfort and low electricity bills. Its sleek design and durable build make it a reliable choice for every home or office.
+    </p>
+
+    <p style="font-size: 20px; color: #000; margin-bottom: 10px;">
+      <b>Price: ₹15000</b> <span style="color: green;">(20% OFF)</span>
+    </p>
+
+    <p style="color: green; font-weight: bold;">In Stock</p>
+    <p>⭐⭐⭐⭐☆ (4.2/5 based on 275 reviews)</p>
+    <p>🚚 Free Delivery by <b>Monday, July 29</b></p>
+    <p>💳 Cash on Delivery available</p>
+
+    <ul>
+  <li>Type: Split AC with Inverter Compressor</li>
+  <li>Capacity: 1.5 Ton – Ideal for medium-sized rooms</li>
+  <li>Energy Rating: 3 Star – Energy efficient</li>
+  <li>Color: White</li>
+</ul>
+
+
+    <label for="tonnage" class="label-text">Capacity:</label>
+<select id="tonnage" name="tonnage" class="size-dropdown" required>
+  <option value="">Select Capacity</option>
+  <option value="1">1 Ton</option>
+  <option value="1.2">1.2 Ton</option>
+  <option value="1.5">1.5 Ton</option>
+  <option value="2">2 Ton</option>
+</select>
+
+
+    <label for="quantity" class="label-text">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" value="1" min="1">
+
+    <div class="button-group">
+      <button class="buy-button">Buy Now</button>
+      <button class="buy-button add-cart">Add to Cart</button>
+      <button style="background: #ff4081; color: white; padding: 10px 15px; border: none; border-radius: 5px;">❤️ Add to Wishlist</button>
+    </div>
+    <br><br>
+    <p>✅ 100% Original Products</p>
+    <p>✅ 7-Day Easy Return</p>
+    <p>✅ Secure Payments via Razorpay / UPI / Card</p>
+
+    <p><b>Brand:</b> Voltas AC</p>
+    <p><b>Sold by:</b> Trendora Retail Pvt Ltd</p>
+    <p><b>EMI:</b> Available on orders above ₹5000</p>
+
+  </div>
+</div>
+
+ <div class="related-products">
+  <h3>Related Products - Voltas AC</h3>
+  <div class="related-list">
+    
+    <div class="product">
+      <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/air-conditioner-new/x/t/s/-original-imaha7kbepa5abbv.jpeg?q=70" alt="Voltas 1.5 Ton Split AC">
+      <p>Voltas 1.5 Ton Split AC</p>
+    </div>
+
+    <div class="product">
+      <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/air-conditioner-new/w/1/e/-original-imah9ru2kapagtfh.jpeg?q=70" alt="Voltas Inverter AC">
+      <p>Voltas Inverter Split AC</p>
+    </div>
+
+    <div class="product">
+      <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/air-conditioner-new/x/t/s/-original-imaha7kbepa5abbv.jpeg?q=70" alt="Voltas Window AC">
+      <p>Voltas 1.5 Ton Window AC</p>
+    </div>
+
+    <div class="product">
+      <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/air-conditioner-new/k/6/k/-original-imah4gsyqzwzzhhx.jpeg?q=70" alt="Voltas 5 Star AC">
+      <p>Voltas 5 Star Split AC</p>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const title = params.get("title");
+  const desc = params.get("desc");
+  const img = params.get("img");
+
+  document.getElementById("product-title").textContent = title || "N AND J Men Solid Polo Neck Polyester Purple T-Shirt";
+  document.getElementById("product-desc").textContent = desc || "Upgrade your wardrobe with this stylish purple polo neck T-shirt from N AND J. Made with premium polyester, it's breathable, durable, and perfect for daily use.";
+  document.getElementById("product-img").src = img || "https://via.placeholder.com/250x250?text=No+Image";
+</script>
+
+</body>
+</html>
